@@ -26,7 +26,7 @@ def scan(ip):
     
     combine_packet = broadcast/arp
     
-    (answer, unanswer) = scapy.srp(combine_packet, timeout=3, verbose=0)
+    answer = scapy.srp(combine_packet, timeout=3, verbose=0)[0]
    
     print("Result : ")
    
